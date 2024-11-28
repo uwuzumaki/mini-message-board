@@ -1,8 +1,14 @@
 <html>
   <head>
-    <title>Homepage</title>
+    <title><%= title %></title>
   </head>
   <body>
-    <h1>Index and or homepage</h1>
+    <ul>
+      <% messages.forEach(message => { %>
+      <h3><%= message.user %></h3>
+      <h2><%= message.text %></h2>
+      <h4><%= message.added %></h4>
+      <% }) %>
+    </ul>
   </body>
 </html>
