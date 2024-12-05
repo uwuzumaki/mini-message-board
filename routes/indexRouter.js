@@ -23,6 +23,12 @@ indexRouter.get("/new", (req, res) => {
   res.render("new");
 });
 
+indexRouter.get("/messages/:id", (req, res) => {
+  const id = req.params.id;
+  const message = messages[id];
+  res.render("message", { message: message });
+});
+
 indexRouter.post("/new", (req, res) => {
   const text = req.body.message;
   const user = req.body.name;
