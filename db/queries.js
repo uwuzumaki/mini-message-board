@@ -15,7 +15,7 @@ const getIDPost = async (id) => {
 const createNewPost = async (message) => {
   const q = {
     text: "INSERT INTO messages(name, text, added) VALUES($1,$2,$3)",
-    values: [message.user, message.text, message.added],
+    values: [message.name, message.text, message.added],
   };
   await pool.query(q.text, q.values);
 };

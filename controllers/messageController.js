@@ -18,7 +18,7 @@ const getIDMessage = async (req, res) => {
 const postNewMessage = async (req, res) => {
   const text = req.body.message;
   const user = req.body.name;
-  const message = { user: user, text: text, added: new Date() };
+  const message = { name: user, text: text, added: new Date() };
   await db.createNewPost(message);
   res.redirect("/");
 };
