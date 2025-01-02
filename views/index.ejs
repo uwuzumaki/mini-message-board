@@ -5,11 +5,11 @@
   <body>
     <h1><%= title %></h1>
     <ul>
-      <% messages.forEach((message, index) => { %>
+      <% messages.forEach((message) => { %>
       <h3><%= message.user %></h3>
       <h2><%= message.text %></h2>
       <h4><%= message.added %></h4>
-      <a href="/messages/<%= index %>">Open</a>
+      <a href="/messages/<%= message.id %>">Open</a>
       <% }) %>
     </ul>
     <a href="/new">Write a message!</a>
