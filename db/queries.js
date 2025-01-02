@@ -1,4 +1,3 @@
-const { getMessages } = require("../controllers/messageController");
 const pool = require("./pool");
 
 const getAllMessages = async () => {
